@@ -1,10 +1,13 @@
-<h1>Tweed Valley Wildlife Carers Members Blog</h1>
-	<p>You have found the home page for the TVWC Member's Blog 
-	</p>
-	 <br/>
+<% if user_signed_in? %>
+<h2> You are logged into the TVWC Blog </h2>
+	<% else %>
+	<div class="hero-unit">
+	<h1> Welcome to the TVWC Members Blog!</h1> <br/>
 <%= link_to "TVWC Website", "http://tvwc.org.au" %>
 	
 	<br/>
 		<p>
       <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
     </p>
+  </div>
+ <% end %>
