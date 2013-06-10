@@ -4,6 +4,7 @@ TvwcBlog::Application.routes.draw do
   resources :pins
 
   devise_for :users
+  match 'users/:id' => 'users#show', as: :user
 
   #devise_for :installs
 
