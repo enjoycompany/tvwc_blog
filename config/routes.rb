@@ -1,4 +1,6 @@
 TvwcBlog::Application.routes.draw do
+  get "users/show"
+
   resources :pins
 
 
